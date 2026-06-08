@@ -1,3 +1,5 @@
+package footballclubmanagement;
+
 import ui.Menu;
 
 /**
