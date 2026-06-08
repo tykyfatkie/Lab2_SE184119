@@ -13,10 +13,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Manages all Player-related CRUD operations.
- * Implements Manageable<Player> and Saveable (Polymorphism via Interfaces).
- */
+
 public class PlayersManager implements Manageable<Player>, Saveable {
 
     private List<Player> players;
@@ -37,7 +34,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
     public List<Player> getPlayers() { return players; }
     public void setPlayers(List<Player> players) { this.players = players; }
 
-    // ── Interface: Manageable ───────────────────────────────────────────────
+    // Interface: Manageable
 
     @Override
     public void add(Player player) {
@@ -70,7 +67,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         }
     }
 
-    // ── Interface: Saveable ─────────────────────────────────────────────────
+    // Interface: Saveable
 
     @Override
     public void saveToFile(String filename) {
@@ -91,7 +88,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         }
     }
 
-    // ── Feature 6: List all players sorted by club name, then shirt number ─
+    // Feature 6: List all players sorted by club name, then shirt number 
     public void listPlayersSorted() {
         System.out.println("\n=== ALL PLAYERS (sorted by Club Name, Shirt Number) ===");
         if (players.isEmpty()) {
@@ -120,7 +117,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         }
     }
 
-    // ── Feature 7: Search players by partial name ───────────────────────────
+    // Feature 7: Search players by partial name 
     public void searchPlayerByName(Scanner sc) {
         System.out.println("\n=== SEARCH PLAYERS BY NAME ===");
         System.out.print("Enter partial player name: ");
@@ -138,7 +135,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         if (!found) System.out.println("No players found matching \"" + keyword + "\".");
     }
 
-    // ── Feature 8: Add a new player ─────────────────────────────────────────
+    // Feature 8: Add a new player 
     public void addPlayer(Scanner sc) {
         System.out.println("\n=== ADD NEW PLAYER ===");
 
@@ -211,7 +208,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         System.out.println("Player added successfully!");
     }
 
-    // ── Feature 9: Remove player by ID ─────────────────────────────────────
+    // Feature 9: Remove player by ID
     public void removePlayer(Scanner sc) {
         System.out.println("\n=== REMOVE PLAYER ===");
         System.out.print("Enter Player ID to remove: ");
@@ -224,7 +221,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         }
     }
 
-    // ── Feature 10: Update player by ID ────────────────────────────────────
+    // Feature 10: Update player by ID 
     public void updatePlayer(Scanner sc) {
         System.out.println("\n=== UPDATE PLAYER ===");
         System.out.print("Enter Player ID to update: ");
@@ -268,7 +265,7 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         System.out.println("Player updated successfully!");
     }
 
-    // ── Feature 11: List players by position ───────────────────────────────
+    // Feature 11: List players by position 
     public void listPlayersByPosition(Scanner sc) {
         System.out.println("\n=== PLAYERS BY POSITION ===");
         System.out.print("Enter Position (Goalkeeper/Defender/Midfielder/Forward/Winger): ");
@@ -291,12 +288,8 @@ public class PlayersManager implements Manageable<Player>, Saveable {
         if (!found) System.out.println("No players found with position: " + normalized);
     }
 
-    // ── Helpers ─────────────────────────────────────────────────────────────
+    //  Helpers 
 
-    /**
-     * Check if a shirt number is already taken in a club.
-     * excludePlayerId is the current player's ID when updating (so we skip self).
-     */
     private boolean isShirtTaken(String clubId, int shirt, String excludePlayerId) {
         for (Player p : players) {
             if (!p.getClubId().equals(clubId)) continue;

@@ -1,9 +1,6 @@
 package model;
 
-/**
- * Represents a Football Club in the EEL tournament.
- * Extends Entity (Inheritance) with encapsulated fields.
- */
+
 public class Club extends Entity {
 
     private String clubName;
@@ -17,7 +14,7 @@ public class Club extends Entity {
         this.budget = budget;
     }
 
-    // ── Getters & Setters (Encapsulation) ──────────────────────────────────
+    // Getters & Setters (Encapsulation) 
     public String getClubName()             { return clubName; }
     public void   setClubName(String n)     { this.clubName = n; }
 
@@ -27,7 +24,7 @@ public class Club extends Entity {
     public double getBudget()               { return budget; }
     public void   setBudget(double b)       { this.budget = b; }
 
-    // ── Abstract method implementations ────────────────────────────────────
+    // Abstract method implementations
     @Override
     public String toTableRow() {
         return String.format("| %-8s | %-30s | %-10s | %10.1f |",

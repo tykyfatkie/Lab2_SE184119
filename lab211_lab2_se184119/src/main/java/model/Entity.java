@@ -1,9 +1,6 @@
 package model;
 
-/**
- * Abstract base class for all entities in the system.
- * Demonstrates Abstraction + Inheritance (OOP principles).
- */
+
 public abstract class Entity {
     protected String id;
 

@@ -10,10 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Manages all Club-related CRUD operations.
- * Implements Manageable<Club> and Saveable (Polymorphism via Interfaces).
- */
+
 public class ClubsManager implements Manageable<Club>, Saveable {
 
     private List<Club> clubs;
@@ -32,7 +29,7 @@ public class ClubsManager implements Manageable<Club>, Saveable {
     public List<Club> getClubs() { return clubs; }
     public void setClubs(List<Club> clubs) { this.clubs = clubs; }
 
-    // ── Interface: Manageable ───────────────────────────────────────────────
+    // Interface: Manageable
 
     @Override
     public void add(Club club) {
@@ -65,7 +62,7 @@ public class ClubsManager implements Manageable<Club>, Saveable {
         }
     }
 
-    // ── Interface: Saveable ─────────────────────────────────────────────────
+    // Interface: Saveable
 
     @Override
     public void saveToFile(String filename) {
@@ -86,13 +83,13 @@ public class ClubsManager implements Manageable<Club>, Saveable {
         }
     }
 
-    // ── Feature 1: List all clubs ───────────────────────────────────────────
+    // Feature 1: List all clubs 
     public void listAllClubs() {
         System.out.println("\n=== LIST OF ALL CLUBS ===");
         displayAll();
     }
 
-    // ── Feature 2: Add a new club ───────────────────────────────────────────
+    // Feature 2: Add a new club
     public void addClub(Scanner sc) {
         System.out.println("\n=== ADD NEW CLUB ===");
 
@@ -146,7 +143,7 @@ public class ClubsManager implements Manageable<Club>, Saveable {
         System.out.println("Club added successfully!");
     }
 
-    // ── Feature 3: Search club by ID ───────────────────────────────────────
+    // Feature 3: Search club by ID 
     public void searchClubById(Scanner sc) {
         System.out.println("\n=== SEARCH CLUB BY ID ===");
         System.out.print("Enter Club ID: ");
@@ -161,7 +158,7 @@ public class ClubsManager implements Manageable<Club>, Saveable {
         }
     }
 
-    // ── Feature 4: Update club by ID ───────────────────────────────────────
+    // Feature 4: Update club by ID 
     public void updateClub(Scanner sc) {
         System.out.println("\n=== UPDATE CLUB ===");
         System.out.print("Enter Club ID to update: ");
@@ -197,7 +194,7 @@ public class ClubsManager implements Manageable<Club>, Saveable {
         System.out.println("Club updated successfully!");
     }
 
-    // ── Feature 5: List clubs with budget <= input ─────────────────────────
+    // Feature 5: List clubs with budget <= input
     public void listClubsByBudget(Scanner sc) {
         System.out.println("\n=== CLUBS WITH BUDGET ≤ INPUT ===");
         double maxBudget;
@@ -221,7 +218,7 @@ public class ClubsManager implements Manageable<Club>, Saveable {
         if (!found) System.out.println("No clubs found with budget ≤ " + maxBudget + "M.");
     }
 
-    // ── Helpers ─────────────────────────────────────────────────────────────
+    // Helpers
     private void printTableHeader() {
         System.out.println(TABLE_SEP);
         System.out.println(TABLE_HEADER);
