@@ -1,9 +1,6 @@
 package model;
 
-/**
- * Represents a Player belonging to a Football Club.
- * Extends Entity (Inheritance) with encapsulated fields.
- */
+
 public class Player extends Entity {
 
     private String clubId;
@@ -20,7 +17,7 @@ public class Player extends Entity {
         this.shirtNumber = shirtNumber;
     }
 
-    // ── Getters & Setters (Encapsulation) ──────────────────────────────────
+    // Getters & Setters (Encapsulation)
     public String getClubId()               { return clubId; }
     public void   setClubId(String c)       { this.clubId = c; }
 
@@ -33,7 +30,7 @@ public class Player extends Entity {
     public int  getShirtNumber()            { return shirtNumber; }
     public void setShirtNumber(int s)       { this.shirtNumber = s; }
 
-    // ── Abstract method implementations ────────────────────────────────────
+    // Abstract method implementations 
     @Override
     public String toTableRow() {
         return String.format("| %-6s | %-8s | %-22s | %-12s | %4d |",
