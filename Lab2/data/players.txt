@@ -1,4 +1,3 @@
-P0001, CL-0001, Lionel Messi, Forward, 10
 P0002, CL-0001, Sergio Busquets, Midfielder, 5
 P0003, CL-0001, Jordi Alba, Defender, 18
 P0004, CL-0002, Luka Modrić, Midfielder, 10
@@ -13,4 +12,4 @@ P0012, CL-0005, Virgil van Dijk, Defender, 4
 P0013, CL-0012, Raheem Sterling, Winger, 7
 P0014, CL-0012, Enzo Fernández, Midfielder, 8
 P0015, CL-0012, Reece James, Defender, 24
-P1111, CL-1234, Nguyen Dinh Bac, Forward, 7
+P0016, CL-0013, Antoine Griezmann, Forward, 7

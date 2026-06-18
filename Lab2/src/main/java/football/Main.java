@@ -1,6 +1,4 @@
-package footballclubmanagement;
-
-import ui.Menu;
+package football;
 
 public class Main {
     public static void main(String[] args) {
