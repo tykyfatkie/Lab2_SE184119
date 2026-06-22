@@ -202,6 +202,6 @@ public class ClubsManager {
     }
 
     private void printDivider() {
-        System.out.println("-".repeat(72));
+        System.out.println(new String(new char[72]).replace('\0', '-'));
     }
 }
