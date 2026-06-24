@@ -146,8 +146,8 @@ public class PlayersManager {
         while (true) {
             System.out.print("Enter Player Name: ");
             name = sc.nextLine().trim();
-            if (!ValidationUtils.isNonEmpty(name)) {
-                System.out.println("Player name cannot be empty!");
+            if (!ValidationUtils.isValidName(name)) {
+                System.out.println("Player name must be 2-50 characters!");
             } else break;
         }
 

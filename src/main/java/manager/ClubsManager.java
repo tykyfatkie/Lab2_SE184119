@@ -81,8 +81,8 @@ public class ClubsManager {
         while (true) {
             System.out.print("Enter Club Name: ");
             name = sc.nextLine().trim();
-            if (!ValidationUtils.isNonEmpty(name)) {
-                System.out.println("Club name cannot be empty!");
+            if (!ValidationUtils.isValidName(name)) {
+                System.out.println("Club name must be 2-50 characters!");
             } else break;
         }
 
@@ -91,8 +91,8 @@ public class ClubsManager {
         while (true) {
             System.out.print("Enter Sponsor Brand: ");
             brand = sc.nextLine().trim();
-            if (!ValidationUtils.isNonEmpty(brand)) {
-                System.out.println("Sponsor brand cannot be empty!");
+            if (!ValidationUtils.isValidName(brand)) {
+                System.out.println("Sponsor brand must be 2-50 characters!");
             } else break;
         }
 
@@ -144,12 +144,18 @@ public class ClubsManager {
         // Update name
         System.out.print("New Club Name [" + c.getClubName() + "]: ");
         String name = sc.nextLine().trim();
-        if (!name.isEmpty()) c.setClubName(name);
+        if (!name.isEmpty()) {
+            if (ValidationUtils.isValidName(name)) c.setClubName(name);
+            else System.out.println("Club name must be 2-50 characters — skipped.");
+        }
 
         // Update sponsor brand
         System.out.print("New Sponsor Brand [" + c.getSponsorBrand() + "]: ");
         String brand = sc.nextLine().trim();
-        if (!brand.isEmpty()) c.setSponsorBrand(brand);
+        if (!brand.isEmpty()) {
+            if (ValidationUtils.isValidName(brand)) c.setSponsorBrand(brand);
+            else System.out.println("Sponsor brand must be 2-50 characters — skipped.");
+        }
 
         // Update budget
         System.out.print("New Budget [" + c.getBudget() + "]: ");

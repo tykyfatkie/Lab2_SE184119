@@ -20,6 +20,15 @@ public class ValidationUtils {
     /**
      * Non-null and non-blank string.
      */
+    public static boolean isValidName(String value) {
+        if (value == null) return false;
+        String t = value.trim();
+        return t.length() >= 2 && t.length() <= 50;
+    }
+
+    /**
+     * Non-null and non-blank string.
+     */
     public static boolean isNonEmpty(String value) {
         return value != null && !value.trim().isEmpty();
     }
