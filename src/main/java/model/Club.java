@@ -1,4 +1,4 @@
-package football.model;
+package model;
 
 
 public class Club {

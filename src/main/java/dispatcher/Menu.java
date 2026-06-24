@@ -1,7 +1,7 @@
-package football;
+package dispatcher;
 
-import football.manager.ClubsManager;
-import football.manager.PlayersManager;
+import manager.ClubsManager;
+import manager.PlayersManager;
 
 import java.util.Scanner;
 

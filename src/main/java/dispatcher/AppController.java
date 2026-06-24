@@ -1,10 +1,10 @@
-package football;
+package dispatcher;
 
-import football.manager.ClubsManager;
-import football.manager.PlayersManager;
-import football.model.Club;
-import football.model.Player;
-import football.utils.FileUtils;
+import manager.ClubsManager;
+import manager.PlayersManager;
+import model.Club;
+import model.Player;
+import utils.FileUtils;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package football.utils;
+package utils;
 
-import football.model.Club;
-import football.model.Player;
+import model.Club;
+import model.Player;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

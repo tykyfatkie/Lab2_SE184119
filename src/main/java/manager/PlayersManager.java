@@ -1,8 +1,8 @@
-package football.manager;
+package manager;
 
-import football.model.Club;
-import football.model.Player;
-import football.utils.ValidationUtils;
+import model.Club;
+import model.Player;
+import utils.ValidationUtils;
 
 import java.util.ArrayList;
 import java.util.List;

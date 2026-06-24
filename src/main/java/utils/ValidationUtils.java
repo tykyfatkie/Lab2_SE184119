@@ -1,6 +1,6 @@
-package football.utils;
+package utils;
 
-import football.model.Player;
+import model.Player;
 
 
 public class ValidationUtils {
