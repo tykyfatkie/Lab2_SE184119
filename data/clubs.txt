@@ -13,3 +13,4 @@ CL-0012, Chelsea FC X Line, Nike, 780
 CL-0013, Atletico Madrid, Nike, 750
 CL-1111, Cong An Ha Noi, Vingroup, 950
 CL-2222, The Cong - Viettel, LPBank, 680
+CL-5555, Juventus, Jeep and Visit Detroit, 1
