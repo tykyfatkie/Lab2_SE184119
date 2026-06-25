@@ -62,7 +62,6 @@ public class AppController {
 
     // ── Feature 14: Quit ─────────────────────────────────────────────────────
 
-    /** Returns false to signal the Menu loop to stop. */
     public boolean quit() {
         if (clubsManager.isModified() || playersManager.isModified()) {
             System.out.println("Unsaved changes detected. Saving before exit...");

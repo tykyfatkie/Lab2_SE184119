@@ -19,14 +19,11 @@ public class Menu {
         this.sc             = new Scanner(System.in);
     }
 
-    // ── Entry point ───────────────────────────────────────────────────────────
-
     public void run() {
         System.out.println("=================================================");
         System.out.println("  European Elite League – Club & Player Manager  ");
         System.out.println("=================================================");
 
-        // Auto-load on startup
         appController.loadData(false);
 
         boolean running = true;
@@ -54,8 +51,6 @@ public class Menu {
         }
         sc.close();
     }
-
-    // ── Print menu ────────────────────────────────────────────────────────────
 
     private void printMenu() {
         System.out.println("\n========== MAIN MENU ==========");
